@@ -4,6 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Data extends ChangeNotifier{
 
+  bool isNight = false;
+
   String titleData;
   String noteData;
 
@@ -12,6 +14,22 @@ class Data extends ChangeNotifier{
   List<String> noteTime = [];
 
 
+  void enableDarkMode(){
+    isNight = !isNight;
+    notifyListeners();
+  }
+
+  void setTheme()async{
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool('theme', isNight);
+  }
+
+  void getTheme()async{
+    final prefs = await SharedPreferences.getInstance();
+    bool value = prefs.getBool('theme');
+    isNight = value ?? isNight;
+    notifyListeners();
+  }
 
   void addTitle(String title) => titleData = title;
 

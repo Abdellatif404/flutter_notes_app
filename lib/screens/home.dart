@@ -18,9 +18,12 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Home', style: titlePageTS,),
+                  Text('Home', style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w500,
+                  ),),
                   IconButton(
-                    icon: Icon(FontAwesomeIcons.cog, size: 22, color: primaryColor,),
+                    icon: Icon(FontAwesomeIcons.cog, size: 22),
                     onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsScreen())),
                   ),
                 ],
@@ -33,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       ),
 
       floatingActionButton: FloatingActionButton(
-        child: Icon(FontAwesomeIcons.plus, color: backgroundColor,),
+        child: Icon(FontAwesomeIcons.plus,color: Theme.of(context).floatingActionButtonTheme.foregroundColor,),
         onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AddNoteScreen())),
       ),
     );

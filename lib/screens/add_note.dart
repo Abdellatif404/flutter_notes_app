@@ -24,8 +24,14 @@ class AddNoteScreen extends StatelessWidget {
                 Navigator.pop(context);
               }
             },),
-            AddNoteTextField(maxLines: 1,hintText: 'Title',textStyle: titleTextStyle,),
-            Flexible(child: AddNoteTextField(maxLines: 50,hintText: 'Note',textStyle: noteTextStyle,)),
+            AddNoteTextField(maxLines: 1,hintText: 'Title',textStyle: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            ),),
+            Flexible(child: AddNoteTextField(maxLines: 50,hintText: 'Note',textStyle: TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.w400,
+            ),)),
           ],
         ),
       ),

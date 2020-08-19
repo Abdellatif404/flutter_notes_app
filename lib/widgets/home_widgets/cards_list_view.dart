@@ -22,11 +22,9 @@ class CardsListView extends StatelessWidget {
             key: ValueKey([data.titles,data.notes]),
             child: Card(
               child: CardListTile(index),
-              color: cardColor,
               margin: EdgeInsets.all(6),
               elevation: 10,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-              shadowColor: Color(0xff73c7fc).withOpacity(0.3),
             ),
             direction: DismissDirection.endToStart,
             onDismissed: (direction){
@@ -44,7 +42,7 @@ class CardsListView extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Icon(
                   FontAwesomeIcons.trashAlt,
-                  color: Color(0xffFF8181),
+                  color: Color(0xFFFA8182),
                   size: 28,
                 ),
               ),

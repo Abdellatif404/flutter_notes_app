@@ -17,14 +17,17 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.arrow_back, size: 27, color: primaryColor,),
+            icon: Icon(Icons.arrow_back, size: 27),
             onPressed: () => Navigator.pop(context),
           ),
-          Text(title, style: titlePageTS,),
+          Text(title, style:  TextStyle(
+            fontSize: 26,
+            fontWeight: FontWeight.w500,
+          ),),
           Visibility(
             visible: visibility ?? true,
             child: IconButton(
-                icon: Icon(icon,color: primaryColor,size: 22,),
+                icon: Icon(icon,size: 22,),
                 onPressed: onPressed,
             ),
           ),

@@ -29,11 +29,6 @@ class AddNoteTextField extends StatelessWidget {
         maxLines: maxLines,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.black45,fontSize: 20),
-          filled: true,
-          fillColor: Color(0xffF3F8F8),
-          enabledBorder: inputBorder,
-          focusedBorder: inputBorder,
         ),
       ),
     );

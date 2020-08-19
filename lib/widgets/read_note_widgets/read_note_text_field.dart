@@ -18,15 +18,10 @@ class ReadNoteTextField extends StatelessWidget {
         maxLines: null,
         style: TextStyle(
           fontSize: fontSize,
-          color: Color(0xff094067),
           fontWeight: fontWeight,
         ),
-        cursorColor: primaryColor,
         decoration: InputDecoration(
-          filled: true,
-          fillColor: backgroundColor,
-          enabledBorder: inputBorder,
-          focusedBorder: inputBorder,
+          fillColor: Colors.transparent,
         ),
       ),
     );

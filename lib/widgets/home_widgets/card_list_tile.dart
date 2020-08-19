@@ -19,7 +19,6 @@ class CardListTile extends StatelessWidget {
         style: TextStyle(
           fontSize: 19,
           fontWeight: FontWeight.w500,
-          color: Color(0xff094067),
         ),
       ),
       subtitle: Padding(
@@ -31,7 +30,7 @@ class CardListTile extends StatelessWidget {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w300,
-            color: Color(0xff5f6c7b),
+
           ),
         ),
       ),

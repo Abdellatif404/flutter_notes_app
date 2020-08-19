@@ -1,13 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notes/widgets/appbar.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:provider/provider.dart';
+
+import '../data.dart';
 
 
 class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    var data = context.watch<Data>();
 
     void _launchURL() async {
       var url = 'https://flutter.dev';
@@ -31,16 +38,37 @@ class SettingsScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: ListTile(
-                title: Text('Source code',style: TextStyle(
-                    color: Colors.black.withOpacity(0.7),
-                    fontSize: 20,
-                    fontWeight: FontWeight.w400
-                ),),
-                trailing: IconButton(
-                  icon: Icon(FontAwesomeIcons.github,color: Color(0xff3C4143),size: 25,),
-                  onPressed: _launchURL,
-                ),
+              child: Column(
+                children: <Widget>[
+                  ListTile(
+                    title: Text('Night mode',style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400
+                    ),),
+                    trailing: Transform.scale(
+                      scale: 0.7,
+                      child: CupertinoSwitch(
+                        value: data.isNight,
+                        onChanged: (value){
+                          data.enableDarkMode();
+                          data.setTheme();
+                        },
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    title: Text('Source code',style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400
+                    ),),
+                    trailing: IconButton(
+                      icon: Icon(FontAwesomeIcons.github,
+                        color: Theme.of(context).primaryIconTheme.color,
+                        size: 25,),
+                      onPressed: _launchURL,
+                    ),
+                  ),
+                ],
               ),
             )
           ],

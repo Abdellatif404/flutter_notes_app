@@ -41,6 +41,7 @@ class CardListTile extends StatelessWidget {
       ),),
       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ReadNoteScreen(index))),
       contentPadding: EdgeInsets.all(17),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     );
   }
 }

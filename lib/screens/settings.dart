@@ -17,7 +17,7 @@ class SettingsScreen extends StatelessWidget {
     var data = context.watch<Data>();
 
     void _launchURL() async {
-      var url = 'https://flutter.dev';
+      var url = 'https://github.com/Abdellatif404/flutter_notes_app';
       try{
         if (await canLaunch(url)) {
           await launch(url);

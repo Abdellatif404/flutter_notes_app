@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:notes/screens/read_note.dart';
+import 'package:notes/services/data.dart';
+import 'file:///C:/Users/Abdellatif/Desktop/FlutterApps/flutter_notes_app/lib/screens/read_note/read_note.dart';
 import 'package:provider/provider.dart';
-import '../../data.dart';
+
 
 
 class CardListTile extends StatelessWidget {

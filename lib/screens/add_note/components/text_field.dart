@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes/styles.dart';
-import 'package:notes/data.dart';
+import 'package:notes/services/data.dart';
 import 'package:provider/provider.dart';
 
 class AddNoteTextField extends StatelessWidget {

@@ -5,7 +5,7 @@ import 'package:notes/widgets/appbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:provider/provider.dart';
 
-import '../data.dart';
+import '../../services/data.dart';
 
 
 class SettingsScreen extends StatelessWidget {

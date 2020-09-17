@@ -1,8 +1,10 @@
+
 import 'package:flutter/material.dart';
-import 'package:notes/data.dart';
+import '../../services/data.dart';
 import 'package:notes/widgets/appbar.dart';
-import 'package:notes/widgets/read_note_widgets/read_note_text_field.dart';
 import 'package:provider/provider.dart';
+
+import 'components/read_note_text_field.dart';
 
 
 class ReadNoteScreen extends StatelessWidget {

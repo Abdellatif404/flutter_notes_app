@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:notes/data.dart';
+import 'package:notes/services/data.dart';
 import 'package:notes/widgets/appbar.dart';
-import 'package:notes/widgets/add_note_widgets/text_field.dart';
 import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../styles.dart';
+
+import 'components/text_field.dart';
+
 
 
 class AddNoteScreen extends StatelessWidget {

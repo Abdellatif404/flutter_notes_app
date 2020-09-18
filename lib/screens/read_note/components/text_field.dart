@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 
 
-class ReadNoteTextField extends StatelessWidget {
+class ReadingTextField extends StatelessWidget {
   final String text;
   final double fontSize;
   final FontWeight fontWeight;
-  ReadNoteTextField({this.text,this.fontSize,this.fontWeight});
+  ReadingTextField({this.text,this.fontSize,this.fontWeight});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class ReadNoteTextField extends StatelessWidget {
         enabled: false,
         maxLines: null,
         controller: TextEditingController(text: text),
-        decoration: InputDecoration(fillColor: Colors.transparent,),
+        decoration: InputDecoration(fillColor: Colors.transparent),
         style: TextStyle(fontSize: fontSize, fontWeight: fontWeight),
       ),
     );

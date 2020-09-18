@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notes/screens/add_note/add_note.dart';
-import 'components/cards_list_view.dart';
-import 'components/home_appbar.dart';
+import 'components/list_view.dart';
+import 'components/appbar.dart';
 
 
 
@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             HomeAppBar(),
-            CardsListView(),
+            CustomListView(),
           ],
         ),
       ),

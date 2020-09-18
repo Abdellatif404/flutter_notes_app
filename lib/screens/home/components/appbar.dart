@@ -9,16 +9,13 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      padding: EdgeInsets.only(left: 20,right: 5,top: 8,bottom: 8),
+      padding: EdgeInsets.fromLTRB(20, 8, 5, 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text(
             'Home',
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.w500,
-            ),
+            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500),
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.cog, size: 22),

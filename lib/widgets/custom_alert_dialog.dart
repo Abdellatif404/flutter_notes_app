@@ -13,15 +13,14 @@ class CustomAlertDialog extends StatelessWidget {
     }
 
     return AlertDialog(
-      title: Text('Confirm delete',),
-      content: Text('Are you sure you want to delete this note?',),
+      title: Text('Confirm delete'),
+      content: Text('Are you sure you want to delete this note?'),
       actions: <Widget>[
         myFlatButton('Delete', Colors.redAccent, true),
         myFlatButton('Cancel', Colors.grey, false),
       ],
-      contentPadding: EdgeInsets.only(top: 15,bottom: 5,left: 25,right: 25),
+      contentPadding: EdgeInsets.fromLTRB(25, 15, 25, 5),
       insetPadding: EdgeInsets.symmetric(horizontal: 20),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     );
   }
 }

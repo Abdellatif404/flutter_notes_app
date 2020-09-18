@@ -3,12 +3,12 @@ import 'colors.dart';
 
 
 
-
-ThemeData lightMode = ThemeData(
+ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: backgroundColor,
   highlightColor: splashColor,
   splashColor: splashColor,
+
 
   fontFamily: 'Poppins',
   textTheme: TextTheme(
@@ -17,11 +17,25 @@ ThemeData lightMode = ThemeData(
       caption: TextStyle(color: textColor),
   ),
 
+
   iconTheme: IconThemeData(color: primaryColor),
   primaryIconTheme: IconThemeData(color: iconColor),
 
-  cardTheme: CardTheme(color: cardColor, shadowColor: shadowCard),
-  dialogBackgroundColor: dialogColor,
+
+  cardTheme: CardTheme(
+    elevation: 10,
+    margin: EdgeInsets.all(6),
+    color: cardColor,
+    shadowColor: shadowCard,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+  ),
+
+
+  dialogTheme: DialogTheme(
+    backgroundColor: dialogColor,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
+  ),
+
 
   floatingActionButtonTheme: FloatingActionButtonThemeData(
     foregroundColor: backgroundColor,
@@ -29,9 +43,14 @@ ThemeData lightMode = ThemeData(
     backgroundColor: primaryColor,
   ),
 
+
   cursorColor: primaryColor,
   inputDecorationTheme: InputDecorationTheme(
-    hintStyle: TextStyle(color: Colors.black45,fontSize: 20),
+    hintStyle: TextStyle(
+      fontSize: 20,
+      color: Colors.black45,
+      fontWeight: FontWeight.w500,
+    ),
     filled: true,
     fillColor: fillColor,
     enabledBorder: inputBorder,

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 
+
 class CustomAppBar extends StatelessWidget {
+  CustomAppBar({this.title,this.isVisible,this.icon,this.onPressed});
   final String title;
-  final bool visibility;
+  final bool isVisible;
   final IconData icon;
   final Function onPressed;
-  CustomAppBar({this.title,this.visibility,this.icon,this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +23,11 @@ class CustomAppBar extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.w500,
-            ),
+            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500),
           ),
           Visibility(
-            visible: visibility ?? true,
-            child: IconButton(
-              icon: Icon(icon, size: 22),
-              onPressed: onPressed,
-            ),
+            visible: isVisible ?? true,
+            child: IconButton(icon: Icon(icon, size: 22), onPressed: onPressed),
           ),
         ],
       ),

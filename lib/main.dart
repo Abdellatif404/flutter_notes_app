@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes/services/data.dart';
 import 'package:provider/provider.dart';
 import 'screens/intro/intro.dart';
-import 'themes/darkTheme.dart';
-import 'themes/lightTheme.dart';
+import 'themes/dark_theme.dart';
+import 'themes/light_theme.dart';
 
 
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'WiNote',
       home: SplashScreen(),
-      theme: data.isNight ? darkMode : lightMode,
+      theme: data.isNight ? darkTheme : lightTheme,
       debugShowCheckedModeBanner: false,
     );
   }

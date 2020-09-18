@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
-import '../../services/data.dart';
-import 'package:notes/widgets/appbar.dart';
+import 'package:notes/services/data.dart';
+import 'package:notes/widgets/custom_appbar.dart';
 import 'package:provider/provider.dart';
+import 'components/text_field.dart';
 
-import 'components/read_note_text_field.dart';
 
 
 class ReadNoteScreen extends StatelessWidget {
@@ -18,26 +17,23 @@ class ReadNoteScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
-            child: Column(
-        children: <Widget>[
-          CustomAppBar(title: '',visibility: false,),
-            ReadNoteTextField(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          children: <Widget>[
+            CustomAppBar(title: '', isVisible: false),
+            ReadingTextField(
               text: data.titles[index],
               fontWeight: FontWeight.w500,
               fontSize: 30,
             ),
-            ReadNoteTextField(
-              text: data.notes[index],
+            ReadingTextField(
+              text: data.contents[index],
               fontWeight: FontWeight.w400,
               fontSize: 22,
             ),
-        ],
-      ),
-          )),
+          ],
+        ),
+      )),
     );
   }
 }
-
-
-

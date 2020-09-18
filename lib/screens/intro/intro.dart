@@ -24,7 +24,8 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Image(
-          image: AssetImage(data.isNight ? 'images/dark_mode_logo.png' : 'images/logo.png'),
+          image: AssetImage(
+              data.isNight ? 'images/dark_mode_logo.png' : 'images/logo.png'),
           height: 260,
         ),
       ),

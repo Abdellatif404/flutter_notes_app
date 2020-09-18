@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:notes/services/data.dart';
 import 'package:provider/provider.dart';
 
-class AddNoteTextField extends StatelessWidget {
+
+
+class AddingTextField extends StatelessWidget {
   final int maxLines;
   final String hintText;
-  final TextStyle textStyle;
-  AddNoteTextField({this.maxLines,this.hintText,this.textStyle});
+  AddingTextField({this.maxLines,this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -15,20 +16,16 @@ class AddNoteTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: TextField(
-        onChanged: (String input){
-          if(input != null){
-            if(hintText == 'Title'){
+        maxLines: maxLines,
+        decoration: InputDecoration(hintText: hintText),
+        onChanged: (input) {
+          if(input != null) {
+            if(hintText == 'Title')
               data.addTitle(input);
-            }else{
-              data.addBody(input);
-            }
+            else
+              data.addContent(input);
           }
         },
-        style: textStyle,
-        maxLines: maxLines,
-        decoration: InputDecoration(
-          hintText: hintText,
-        ),
       ),
     );
   }

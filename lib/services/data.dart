@@ -31,10 +31,10 @@ class Data extends ChangeNotifier{
 // Add the title of the note from text field to titleData variable
   void addTitle(String value) => title = value;
 
-// Add the body of the note from text field to bodyData variable
+// Add the content of the note from text field to bodyData variable
   void addContent(String value) => content = value;
 
-  // Create a new note by the given title and body
+  // Create a new note by the given title and content
   void addNote() {
     var now = DateTime.now();
     bool hours = now.hour < 10 ? '0${now.hour}' : now.hour;

@@ -5,21 +5,33 @@ import '../home/home.dart';
 
 
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
+  _SplashScreenState createState() => _SplashScreenState();
+}
 
-  var data = Provider.of<Data>(context);
-  Future goHome() async {
+class _SplashScreenState extends State<SplashScreen> {
+
+  void getDataAndGoHome() async {
+    context.read<Data>().getData();
+    context.read<Data>().getTheme();
+
     await Future.delayed(Duration(seconds: 3));
     Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => HomeScreen())
     );
   }
 
-  context.select((Data data) => data.getData());
-  context.select((Data data) => data.getTheme());
-  goHome();
+  @override
+  void initState() {
+    super.initState();
+    getDataAndGoHome();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+  var data = Provider.of<Data>(context);
 
     return Scaffold(
       body: Center(

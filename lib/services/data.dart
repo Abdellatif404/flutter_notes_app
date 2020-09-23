@@ -6,8 +6,11 @@ class Data extends ChangeNotifier{
 
 
   bool isNight = false;
-  String title, content;
-  List<String> titles, contents, timeSnapShots;
+  String title = '';
+  String content = '';
+  List<String> titles = [];
+  List<String> contents = [];
+  List<String> timeSnapShots = [];
 
 
   void enableDarkMode(){
@@ -37,8 +40,8 @@ class Data extends ChangeNotifier{
   // Create a new note by the given title and content
   void addNote() {
     var now = DateTime.now();
-    bool hours = now.hour < 10 ? '0${now.hour}' : now.hour;
-    bool minutes = now.minute < 10 ? '0${now.minute}' : now.minute;
+    int hours = now.hour < 10 ? '0${now.hour}' : now.hour;
+    int minutes = now.minute < 10 ? '0${now.minute}' : now.minute;
 
     String currentTime = '$hours:$minutes';
 

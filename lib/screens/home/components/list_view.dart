@@ -15,7 +15,7 @@ class CustomListView extends StatelessWidget {
       child: ListView.builder(
         padding: EdgeInsets.all(10),
         physics: BouncingScrollPhysics(),
-        itemCount: data.contents.length,
+        itemCount: data.notes['titles'].length,
         itemBuilder: (context,index) => CustomDismissible(data: data,index: index),
       ),
     );

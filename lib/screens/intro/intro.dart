@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/services/shared_pref.dart';
 import 'package:provider/provider.dart';
 import '../../services/data.dart';
 import '../home/home.dart';
@@ -13,8 +14,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
 
   void getDataAndGoHome() async {
-    context.read<Data>().getData();
-    context.read<Data>().getTheme();
+    context.read<Data>().readFile();
+    context.read<SharedPref>().getTheme();
 
     await Future.delayed(Duration(seconds: 3));
     Navigator.of(context).pushReplacement(
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
 
-  var data = Provider.of<Data>(context);
+  var data = Provider.of<SharedPref>(context);
 
     return Scaffold(
       body: Center(

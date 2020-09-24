@@ -22,12 +22,12 @@ class ReadNoteScreen extends StatelessWidget {
           children: <Widget>[
             CustomAppBar(title: '', isVisible: false),
             ReadingTextField(
-              text: data.titles[index],
+              text: data.notes['titles'][index],
               fontWeight: FontWeight.w500,
               fontSize: 30,
             ),
             ReadingTextField(
-              text: data.contents[index],
+              text: data.notes['contents'][index],
               fontWeight: FontWeight.w400,
               fontSize: 22,
             ),

@@ -15,7 +15,7 @@ class CustomListTile extends StatelessWidget {
 
     return ListTile(
       title: Text(
-        data.titles[index],
+        data.notes['titles'][index],
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
         style: TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
@@ -23,14 +23,14 @@ class CustomListTile extends StatelessWidget {
       subtitle: Padding(
         padding: const EdgeInsets.only(top: 8),
         child: Text(
-          data.contents[index],
+          data.notes['contents'][index],
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
         ),
       ),
       trailing: Text(
-        data.timeSnapShots[index],
+        data.notes['timeSnapShots'][index],
         style: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w400,

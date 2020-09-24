@@ -16,7 +16,7 @@ class CustomDismissible extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Dismissible(
-      key: ValueKey([data.titles, data.contents]),
+      key: ValueKey([data.notes['titles']]),
       direction: DismissDirection.endToStart,
       child: Card(child: CustomListTile(index)),
       background: Padding(
@@ -27,10 +27,7 @@ class CustomDismissible extends StatelessWidget {
               color: Color(0xFFFA8182), size: 28),
         ),
       ),
-      onDismissed: (direction) {
-        context.read<Data>().removeNote(index);
-        context.read<Data>().setData();
-      },
+      onDismissed: (direction) => context.read<Data>().removeNote(index),
       confirmDismiss: (direction) => showDialog(
           context: context, builder: (context) => CustomAlertDialog()),
     );

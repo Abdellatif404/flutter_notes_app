@@ -23,7 +23,6 @@ class AddNoteScreen extends StatelessWidget {
               onPressed: () {
                 if (data.title != '' && data.content != '') {
                   data.addNote();
-                  data.setData();
                   Navigator.pop(context);
                 }
               },
